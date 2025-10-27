@@ -1,0 +1,13 @@
+<h1>Music Player</h1>
+
+<!-- Song Title -->
+<h3>{{ songTitle }}</h3>
+
+<!-- Play Button -->
+<button (click)="playSong()">▶️ Play</button>
+
+<!-- Audio Element -->
+<audio #audioPlayer controls style="display:none">
+  <source [src]="songUrl" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
