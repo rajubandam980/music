@@ -1,0 +1,73 @@
+<div class="admin-container">
+
+  <h1>Admin Dashboard</h1>
+
+  <!-- Playlist Form -->
+
+  <div class="card">
+
+    <h2>Create Playlist</h2>
+
+    <input
+      type="text"
+      placeholder="Playlist Name"
+      [(ngModel)]="playlist.name">
+
+    <input
+      type="text"
+      placeholder="Image URL"
+      [(ngModel)]="playlist.imageUrl">
+
+    <button
+      (click)="createPlaylist()">
+      Create Playlist
+    </button>
+
+  </div>
+
+  <!-- Song Form -->
+
+  <div class="card">
+
+    <h2>Add Song</h2>
+
+    <input
+      type="text"
+      placeholder="Song Title"
+      [(ngModel)]="song.title">
+
+    <input
+      type="text"
+      placeholder="Artist"
+      [(ngModel)]="song.artist">
+
+    <input
+      type="text"
+      placeholder="Song URL"
+      [(ngModel)]="song.songUrl">
+
+    <select
+      [(ngModel)]="song.playlistId">
+
+      <option value="0">
+        Select Playlist
+      </option>
+
+      <option
+        *ngFor="let p of playlists"
+        [value]="p.id">
+
+        {{ p.name }}
+
+      </option>
+
+    </select>
+
+    <button
+      (click)="createSong()">
+      Add Song
+    </button>
+
+  </div>
+
+</div>

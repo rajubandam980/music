@@ -1,0 +1,49 @@
+<div class="songs-page">
+
+  <h1 class="page-title">🎵 Songs</h1>
+
+  <!-- SONG LIST -->
+  <div class="song-list">
+
+    <div class="song-card" *ngFor="let song of songs">
+
+      <div class="song-info">
+
+        <div class="song-avatar">
+          🎧
+        </div>
+
+        <div class="song-text">
+          <h3>{{ song.title }}</h3>
+          <p>{{ song.artist }}</p>
+        </div>
+
+      </div>
+
+      <button class="play-btn" (click)="playSong(song)">
+        ▶ Play
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- PLAYER -->
+<div *ngIf="selectedSong" class="player">
+
+  <div class="now-playing">
+
+    <div>
+      <h3>Now Playing 🎶</h3>
+      <p>{{ selectedSong.title }} - {{ selectedSong.artist }}</p>
+    </div>
+
+  </div>
+
+  <audio controls autoplay>
+    <source [src]="selectedSong.songUrl" type="audio/mpeg">
+  </audio>
+
+</div>

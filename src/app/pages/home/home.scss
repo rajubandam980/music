@@ -1,0 +1,77 @@
+.hero {
+  min-height: 90vh;
+
+  background:
+      linear-gradient(
+      rgba(0,0,0,.6),
+      rgba(0,0,0,.7)
+      ),
+      url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f');
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+}
+
+.start-btn,
+.browse-btn {
+  padding: 15px 30px;
+  margin: 10px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.start-btn {
+  background: #1db954;
+  color: white;
+}
+
+.browse-btn {
+  background: white;
+  color: black;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 80px 40px;
+  background: #181818;
+}
+
+.feature-card {
+  width: 300px;
+  padding: 30px;
+  background: #242424;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  transition: .3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}

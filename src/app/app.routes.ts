@@ -1,7 +1,40 @@
 import { Routes } from '@angular/router';
-import { SongPlayer } from './song-player/song-player';
+import { Home } from './pages/home/home';
+import { Login } from './pages/login/login';
+import { Register } from './pages/register/register';
+import { Songs } from './pages/songs/songs';
+import { Playlists } from './pages/playlists/playlists';
+import { Admin } from './pages/admin/admin';
+import { PlaylistDetails } from './pages/playlist-details/playlist-details';
 
 export const routes: Routes = [
-    {path:'playsong', component:SongPlayer},
-    {path:'', redirectTo:'/playsong',pathMatch:'full'}
-];
+
+    {
+        path:"", component:Home
+    },
+    {
+    path: 'login',
+    component: Login
+    },
+    {
+        path: 'register',
+        component: Register
+    },
+    {
+    path: 'songs',
+    component: Songs
+   },
+     {
+    path: 'playlists',
+    component: Playlists
+  },
+  {
+    path: 'admin',
+    component: Admin
+  },
+  {
+  path: 'playlist/:id',
+  component: PlaylistDetails
+}
+
+]
