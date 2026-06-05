@@ -28,7 +28,7 @@ export class Playlists implements OnInit{
       songs: [
         {
           title: 'Chikiri Chikiri',
-          artist: 'Rahul Sipligunj',
+          artist: 'Ar rahaman',
           songUrl: 'music/Chikiri Chikiri.mp3'
         },
       ]
@@ -175,14 +175,14 @@ loadPlaylists(): void {
     this.selectedSong = song;
     this.currentIndex = index;
   }
-  next() {
+  playNext() {
     if (this.currentIndex < this.selectedPlaylist.songs.length - 1) {
       this.currentIndex++;
       this.selectedSong = this.selectedPlaylist.songs[this.currentIndex];
     }
   }
 
-  prev() {
+  playPrevious() {
     if (this.currentIndex > 0) {
       this.currentIndex--;
       this.selectedSong = this.selectedPlaylist.songs[this.currentIndex];

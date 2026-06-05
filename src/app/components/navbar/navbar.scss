@@ -1,62 +1,65 @@
 .navbar {
-  height: 75px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 70px;
+
   background: #121212;
-  color: white;
+  border-top: 1px solid #2a2a2a;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
-  padding: 0 60px;
-
-  position: sticky;
-  top: 0;
   z-index: 1000;
 }
 
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-  color: #1db954;
-}
-
-.nav-links {
+.navbar a {
   display: flex;
-  list-style: none;
-  gap: 30px;
-}
+  flex-direction: column;
+  align-items: center;
 
-.nav-links a {
   text-decoration: none;
-  color: white;
-  font-size: 16px;
+  color: #b3b3b3;
+
   transition: 0.3s;
 }
 
-.nav-links a:hover {
+.navbar a span {
+  font-size: 22px;
+}
+
+.navbar a small {
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.navbar a:hover,
+.navbar a.active {
   color: #1db954;
 }
 
-.auth-buttons {
-  display: flex;
-  gap: 15px;
-}
+/* Desktop */
+@media (min-width: 769px) {
+  .navbar {
+    top: 0;
+    bottom: auto;
 
-.login-btn,
-.signup-btn {
-  border: none;
-  padding: 10px 20px;
-  border-radius: 25px;
-  cursor: pointer;
-}
+    height: 70px;
 
-.login-btn {
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-}
+    border-top: none;
+    border-bottom: 1px solid #2a2a2a;
+  }
 
-.signup-btn {
-  background: #1db954;
-  color: white;
+  .navbar a {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .navbar a small {
+    font-size: 14px;
+    margin-top: 0;
+  }
 }

@@ -1,22 +1,23 @@
 <nav class="navbar">
-  <div class="logo">
-    🎵 MusicHub
-  </div>
 
-  <ul class="nav-links">
-    <li><a routerLink="/">Home</a></li>
-    <li><a routerLink="/songs">Songs</a></li>
-    <li><a routerLink="/playlists">Playlists</a></li>
-    <li><a routerLink="/favorites">Favorites</a></li>
-  </ul>
+  <a routerLink="/" routerLinkActive="active">
+    <span>🏠</span>
+    <small>Home</small>
+  </a>
 
-  <div class="auth-buttons">
-    <button class="login-btn" routerLink="/login">
-      Login
-    </button>
+  <a routerLink="/songs" routerLinkActive="active">
+    <span>🎵</span>
+    <small>Songs</small>
+  </a>
 
-    <button class="signup-btn" routerLink="/register">
-      Sign Up
-    </button>
-  </div>
+  <a routerLink="/playlists" routerLinkActive="active">
+    <span>📂</span>
+    <small>Playlists</small>
+  </a>
+
+  <a routerLink="/profile" routerLinkActive="active">
+    <span>👤</span>
+    <small>Profile</small>
+  </a>
+
 </nav>

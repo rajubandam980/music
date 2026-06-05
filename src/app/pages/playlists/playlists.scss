@@ -67,16 +67,171 @@ button {
 
 .player {
   position: fixed;
-  bottom: 0;
+
   left: 0;
   right: 0;
-  background: #000;
-  padding: 15px;
+
+  bottom: 70px; /* navbar height */
+
+  background: #181818;
   border-top: 1px solid #333;
+
+  padding: 18px 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
+
+  z-index: 1000;
+}   
+
+.now-playing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.now-playing h3 {
+  margin: 0;
+  color: #1db954;
+}
+
+.now-playing p {
+  margin-top: 5px;
+  color: #d1d1d1;
+}
+
+audio {
+  width: 100%;
+  border-radius: 10px;
 }
 
 .controls {
   display: flex;
   gap: 10px;
   margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+
+.playlist-page {
+  padding: 30px;
+  padding-bottom: 200px; /* IMPORTANT FIX */
+  background: #121212;
+  min-height: 100vh;
+  color: white;
+}
+
+  .playlist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .playlist-card {
+    width: 100%;
+  }
+
+  .playlist-card img {
+    height: 180px;
+  }
+
+  .song-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .song-card button {
+    width: 100%;
+  }
+
+  .back-btn {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .songs-page {
+    padding: 20px;
+  }
+
+  .song-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .play-btn {
+    width: 100%;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+}
+.player-controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.control-btn {
+  background: #1db954;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.control-btn:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+
+  .songs-page {
+    padding: 15px;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .song-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .song-info {
+    width: 100%;
+  }
+
+  .song-avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .play-btn {
+    width: 100%;
+  }
+
+  .player {
+    padding: 12px;
+  }
+
+  .player-controls {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .control-btn {
+    flex: 1;
+    min-width: 120px;
+  }
 }

@@ -1,0 +1,56 @@
+.profile-page {
+  min-height: 100vh;
+  background: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 350px;
+  background: #1e1e2f;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.profile-card h2 {
+  margin: 10px 0;
+}
+
+.profile-card p {
+  color: #b3b3b3;
+}
+
+.info-box {
+  margin: 20px 0;
+  padding: 12px;
+  background: #2a2a3d;
+  border-radius: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #1db954;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  opacity: 0.9;
+}

@@ -6,6 +6,7 @@ import { Songs } from './pages/songs/songs';
 import { Playlists } from './pages/playlists/playlists';
 import { Admin } from './pages/admin/admin';
 import { PlaylistDetails } from './pages/playlist-details/playlist-details';
+import { Profile } from './components/profile/profile';
 
 export const routes: Routes = [
 
@@ -32,6 +33,10 @@ export const routes: Routes = [
     path: 'admin',
     component: Admin
   },
+  {
+    path: 'profile',
+    component: Profile
+  }
 //   {
 //   path: 'playlist/:id',
 //   component: PlaylistDetails

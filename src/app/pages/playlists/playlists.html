@@ -46,20 +46,38 @@
   </div>
 
   <!-- PLAYER -->
-  <div *ngIf="selectedSong" class="player">
+<div *ngIf="selectedSong" class="player">
 
-    <h3>Now Playing 🎶</h3>
-    <p>{{ selectedSong.title }} - {{ selectedSong.artist }}</p>
-
-    <div class="controls">
-
-      <button (click)="prev()">⏮</button>
-      <button (click)="next()">⏭</button>
-
+  <div class="now-playing">
+    <div>
+      <h3>🎶 Now Playing</h3>
+      <p>{{ selectedSong.title }} - {{ selectedSong.artist }}</p>
     </div>
+  </div>
 
-    <audio controls autoplay [src]="selectedSong.songUrl"></audio>
+  <div class="player-controls">
+
+    <button
+      class="control-btn"
+      (click)="playPrevious()">
+      ⏮ Previous
+    </button>
+
+    <button
+      class="control-btn"
+      (click)="playNext()">
+      Next ⏭
+    </button>
 
   </div>
+
+  <audio
+    controls
+    autoplay
+    [src]="selectedSong.songUrl">
+  </audio>
+
+</div>
+
 
 </div>
