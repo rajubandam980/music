@@ -32,9 +32,9 @@ export const routes: Routes = [
     path: 'admin',
     component: Admin
   },
-  {
-  path: 'playlist/:id',
-  component: PlaylistDetails
-}
+//   {
+//   path: 'playlist/:id',
+//   component: PlaylistDetails
+// }
 
 ]
