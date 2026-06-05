@@ -19,10 +19,95 @@ export class Playlists implements OnInit{
 
   testMessage = 'RAJU PLAYLIST COMPONENT';
 
-  playlists: any[] = [];
+  // playlists: any[] = [];
+   playlists = [
+    {
+      id: 1,
+      name: 'Telugu Hits',
+      imageUrl: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500',
+      songs: [
+        {
+          title: 'Chikiri Chikiri',
+          artist: 'Rahul Sipligunj',
+          songUrl: 'music/Chikiri Chikiri.mp3'
+        },
+      ]
+    },
+    {
+      id: 2,
+      name: 'Romantic Hits',
+      imageUrl: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500',
+      songs: [
+        {
+          title: 'Samajavaragamana',
+          artist: 'Sid Sriram',
+          songUrl: 'music/samajavaragamana.mp3'
+        },
+        {
+          title: 'Rubaroo rubaa',
+          artist: 'Sid',
+          songUrl: 'music/Rubaroo.mp3'
+        }
+      ]
+    },
+    {
+    id: 3,
+    name: 'Workout Mix',
+    imageUrl: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500',
+    songs:[
+      {
+          title: 'Pineke badh',
+          artist: 'Rahul',
+          songUrl:'music/Peene Ke Baad Kick Ass.mp3'
+      }
+    ]
+  },
+  {
+    id: 4,
+    name: 'Party Songs',
+    imageUrl: 'https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=500',
+    songs: [
+        {
+          title: 'Rai Rai Raa Raa',
+          artist: 'Armaan Malik',
+          songUrl: 'music/Rai Rai Raa Raa.mp3'
+        }
+    ]
+  },
+  {
+    id: 5,
+    name: '90s Telugu Classics',
+    imageUrl: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=500',
+    songs:[
+      {
+      title: 'Hrudayama',
+      artist: 'Sid Sriram',
+      songUrl: 'music/Hrudayama.mp3'
+    },
+      
+    ]
+  },
+  {
+    id: 6,
+    name: 'Melody Mix',
+    imageUrl: 'https://images.unsplash.com/photo-1501612780327-45045538702b?w=500',
+    songs:[
+    {
+      title: 'Chusane',
+      artist: 'Sid Sriram',
+      songUrl: 'music/Chusane.mp3'
+    }
+    ]
+  }
+  ];
+
+
+
   songs: any[] = [];
   selectedPlaylistId: number | null = null;
   selectedSong: any = null;
+  selectedPlaylist: any = null;
+  currentIndex: number = -1;
 
 
 
@@ -41,48 +126,68 @@ export class Playlists implements OnInit{
   }
 loadPlaylists(): void {
 
-  console.log('Loading playlists...');
+  // console.log('Loading playlists...');
 
-  this.playlistService.getAllPlaylists().subscribe({
-    next: (data: any) => {
+  // this.playlistService.getAllPlaylists().subscribe({
+  //   next: (data: any) => {
 
-      console.log('API Response:', data);
+  //     console.log('API Response:', data);
 
-      // 🔥 force fresh reference
-      this.playlists = [];
-      this.playlists = [...data];
+  //     // 🔥 force fresh reference
+  //     this.playlists = [];
+  //     this.playlists = [...data];
 
-      console.log('Final playlists:', this.playlists.length);
+  //     console.log('Final playlists:', this.playlists.length);
 
-    },
-    error: (err: any) => {
-      console.error(err);
-    }
-  });
+  //   },
+  //   error: (err: any) => {
+  //     console.error(err);
+  //   }
+  // });
 
 }
-    openPlaylist(id: number): void {
-    console.log('Selected Playlist ID:', id);
-    this.selectedPlaylistId = id;
-    this.songService.getSongsByPlaylist(id).subscribe({
-      next: (data:any)=> {
-        this.songs = data;
-        this.cd.detectChanges();
+  //   openPlaylist(id: number): void {
+  //   console.log('Selected Playlist ID:', id);
+  //   this.selectedPlaylistId = id;
+  //   this.songService.getSongsByPlaylist(id).subscribe({
+  //     next: (data:any)=> {
+  //       this.songs = data;
+  //       this.cd.detectChanges();
 
-      },
-      error: (err:any) => {
-        console.error(err);
-      }
-    })
-    // console.log('Songs loaded for playlist:', this.songs);
+  //     },
+  //     error: (err:any) => {
+  //       console.error(err);
+  //     }
+  //   })
+  //   // console.log('Songs loaded for playlist:', this.songs);
 
-    // We will load songs here in the next step
+  //   // We will load songs here in the next step
+  // }
+//   playSong(song: any): void {
+
+//   this.selectedSong = song;
+
+// } 
+  openPlaylist(pl: any) {
+    this.selectedPlaylist = pl;
   }
-  playSong(song: any): void {
+    playSong(song: any, index: number) {
+    this.selectedSong = song;
+    this.currentIndex = index;
+  }
+  next() {
+    if (this.currentIndex < this.selectedPlaylist.songs.length - 1) {
+      this.currentIndex++;
+      this.selectedSong = this.selectedPlaylist.songs[this.currentIndex];
+    }
+  }
 
-  this.selectedSong = song;
-
-} 
+  prev() {
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+      this.selectedSong = this.selectedPlaylist.songs[this.currentIndex];
+    }
+  }
 
   
 }

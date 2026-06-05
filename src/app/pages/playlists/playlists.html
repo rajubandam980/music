@@ -1,62 +1,65 @@
 <div class="playlist-page">
 
-  <h1>Browse Playlists</h1>
+  <h1>Playlists</h1>
 
-  <div class="playlist-grid">
+  <!-- PLAYLIST GRID -->
+  <div class="playlist-grid" *ngIf="!selectedPlaylist">
 
-    <div
-      class="playlist-card"
-      *ngFor="let playlist of playlists" (click)="openPlaylist(playlist.id)">
-      <img
-        [src]="playlist.imageUrl"
-        alt="playlist">
+    <div class="playlist-card"
+         *ngFor="let pl of playlists"
+         (click)="openPlaylist(pl)">
 
-      <h3>{{ playlist.name }}</h3>
+      <img [src]="pl.imageUrl" />
+
+      <h3>{{ pl.name }}</h3>
 
     </div>
 
   </div>
-  <div *ngIf="songs.length > 0">
 
-  <h2>Songs</h2>
+  <!-- PLAYLIST DETAILS -->
+  <div class="playlist-details" *ngIf="selectedPlaylist">
 
-  <div
-    class="song-card"
-    *ngFor="let song of songs">
-
-    <div>
-      <h3>{{ song.title }}</h3>
-      <p>{{ song.artist }}</p>
-    </div>
-
-    <button
-      (click)="playSong(song)">
-      ▶ Play
+    <button class="back-btn" (click)="selectedPlaylist = null">
+      ← Back
     </button>
 
+    <h2>{{ selectedPlaylist.name }}</h2>
+
+    <div class="song-list">
+
+      <div class="song-card"
+           *ngFor="let song of selectedPlaylist.songs; let i = index">
+
+        <div>
+          <h3>{{ song.title }}</h3>
+          <p>{{ song.artist }}</p>
+        </div>
+
+        <button (click)="playSong(song, i)">
+          ▶ Play
+        </button>
+
+      </div>
+
+    </div>
   </div>
 
-</div>
+  <!-- PLAYER -->
+  <div *ngIf="selectedSong" class="player">
 
-</div>
-<div
-  class="player"
-  *ngIf="selectedSong">
+    <h3>Now Playing 🎶</h3>
+    <p>{{ selectedSong.title }} - {{ selectedSong.artist }}</p>
 
-  <h3>
-    Now Playing
-  </h3>
+    <div class="controls">
 
-  <p>
-    {{ selectedSong.title }}
-  </p>
+      <button (click)="prev()">⏮</button>
+      <button (click)="next()">⏭</button>
 
-  <audio controls autoplay>
+    </div>
 
-    <source
-      [src]="selectedSong.songUrl"
-      type="audio/mpeg">
+    <audio controls autoplay [src]="selectedSong.songUrl"></audio>
 
-  </audio>
+  </div>
 
 </div>
