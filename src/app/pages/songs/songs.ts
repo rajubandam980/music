@@ -45,6 +45,11 @@ export class Songs implements OnInit {
       title: 'Chusane',
       artist: 'Sid Sriram',
       songUrl: 'music/Chusane.mp3'
+    },
+    {
+      title: 'Valukanula dana',
+      artist: 'Unni Menon',
+      songUrl: 'music/Valukanula dana.mp3'
     }
 
   ];

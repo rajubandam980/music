@@ -39,9 +39,9 @@ export class Playlists implements OnInit{
       imageUrl: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500',
       songs: [
         {
-          title: 'Samajavaragamana',
-          artist: 'Sid Sriram',
-          songUrl: 'music/samajavaragamana.mp3'
+          title: 'Valukanula dana',
+          artist: 'Unni Menon',
+          songUrl: 'music/Valukanula dana.mp3'
         },
         {
           title: 'Rubaroo rubaa',
