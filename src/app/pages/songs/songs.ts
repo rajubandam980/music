@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SongService } from '../../services/song';
@@ -13,7 +13,15 @@ import { SongService } from '../../services/song';
 export class Songs implements OnInit {
   selectedSong: any = null;
 
+@ViewChild('audioPlayer')
+audioPlayer!: ElementRef<HTMLAudioElement>;
+
   currentSongIndex = -1;
+  isPlaying = true;
+
+  currentTime = 0;
+  duration = 0;
+  progress = 0;
 
     songs = [
     {
@@ -99,6 +107,41 @@ playPrevious(): void {
     this.selectedSong = this.songs[this.currentSongIndex];
   }
 }
+togglePlayPause() {
+  const audio = this.audioPlayer.nativeElement;
 
+  if (audio.paused) {
+    audio.play();
+    this.isPlaying = true;
+  } else {
+    audio.pause();
+    this.isPlaying = false;
+  }
+}
 
+updateProgress() {
+
+  const audio = this.audioPlayer.nativeElement;
+
+  this.currentTime = audio.currentTime;
+
+  this.progress =
+    (audio.currentTime / audio.duration) * 100;
+}
+
+setDuration() {
+
+  const audio = this.audioPlayer.nativeElement;
+
+  this.duration = audio.duration;
+}
+
+formatTime(seconds: number): string {
+
+  const mins = Math.floor(seconds / 60);
+
+  const secs = Math.floor(seconds % 60);
+
+  return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+}
 }

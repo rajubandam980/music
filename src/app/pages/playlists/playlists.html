@@ -48,36 +48,57 @@
   <!-- PLAYER -->
 <div *ngIf="selectedSong" class="player">
 
-  <div class="now-playing">
-    <div>
-      <h3>🎶 Now Playing</h3>
-      <p>{{ selectedSong.title }} - {{ selectedSong.artist }}</p>
+  <div class="player-header">
+
+    <div class="song-details">
+
+      <img
+        src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200"
+        alt="Album"
+        class="album-art"
+      >
+
+      <div class="song-meta">
+        <h4>{{ selectedSong.title }}</h4>
+        <p>{{ selectedSong.artist }}</p>
+      </div>
+
     </div>
+
+    <!-- <button class="favorite-btn">
+      ❤️
+    </button> -->
+
   </div>
 
   <div class="player-controls">
 
-    <button
-      class="control-btn"
-      (click)="playPrevious()">
-      ⏮ Previous
+    <button class="icon-btn" (click)="playPrevious()">
+      ⏮
     </button>
 
-    <button
-      class="control-btn"
-      (click)="playNext()">
-      Next ⏭
+      <button class="play-btn-main" (click)="togglePlayPause()">
+        {{ isPlaying ? '⏸' : '▶' }}
+      </button>
+
+    <button class="icon-btn" (click)="playNext()">
+      ⏭
     </button>
 
   </div>
 
-  <audio
-    controls
-    autoplay
-    [src]="selectedSong.songUrl">
-  </audio>
+<audio
+  *ngIf="selectedSong"
+  #audioPlayer
+  controls
+  autoplay
+  [src]="selectedSong.songUrl"
+  (ended)="playNext()">
+</audio>
 
 </div>
+
+
 
 
 </div>
