@@ -83,6 +83,12 @@ export const SONGS = [
     title: 'Ranu Bombai Ki Ranu',
     artist: 'Janhavi Yerram',
     songUrl: 'music/folksongs/RANU BOMBAI KI RANU.mp3'
+  },
+  {
+    id:14,
+    title: 'Hellallallo',
+    artist: 'Ar Rahaman',
+    songUrl: 'music/Hellallallo.mp3'
   }
 
 ];

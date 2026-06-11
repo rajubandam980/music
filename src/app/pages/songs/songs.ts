@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SongService } from '../../services/song';
+import { SONGS } from '../../data/songs-data';
 
 @Component({
   selector: 'app-songs',
@@ -23,44 +24,7 @@ audioPlayer!: ElementRef<HTMLAudioElement>;
   duration = 0;
   progress = 0;
 
-    songs = [
-    {
-      title: 'Chikri Chikri',
-      artist: 'Rahul Sipligunj',
-      songUrl: 'music/Chikiri Chikiri.mp3'
-    },
-    {
-      title: 'Rai Rai Ra Ra',
-      artist: 'Armaan Malik',
-      songUrl: 'music/Rai Rai Raa Raa.mp3'
-    },
-    {
-      title: 'Peene ke Bad',
-      artist: 'Sid Sriram',
-      songUrl: 'music/Peene Ke Baad Kick Ass.mp3'
-    },
-    {
-      title: 'Rubaroo rubaa',
-      artist: 'Sid Sriram',
-      songUrl: 'music/Rubaroo.mp3'
-    },
-    {
-      title: 'Hrudayama',
-      artist: 'Sid Sriram',
-      songUrl: 'music/Hrudayama.mp3'
-    },
-    {
-      title: 'Chusane',
-      artist: 'Sid Sriram',
-      songUrl: 'music/Chusane.mp3'
-    },
-    {
-      title: 'Valukanula dana',
-      artist: 'Unni Menon',
-      songUrl: 'music/Valukanula dana.mp3'
-    }
-
-  ];
+  songs = SONGS;
 
   constructor(private songService: SongService) {}
 
