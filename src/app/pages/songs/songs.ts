@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SongService } from '../../services/song';
 import { SONGS } from '../../data/songs-data';
+import { PlayerService } from '../../player.service';
 
 @Component({
   selector: 'app-songs',
@@ -12,6 +13,7 @@ import { SONGS } from '../../data/songs-data';
   styleUrl: './songs.scss',
 })
 export class Songs implements OnInit {
+  
   selectedSong: any = null;
 
 @ViewChild('audioPlayer')
@@ -26,7 +28,7 @@ audioPlayer!: ElementRef<HTMLAudioElement>;
 
   songs = SONGS;
 
-  constructor(private songService: SongService) {}
+  constructor(private songService: SongService,public playerService: PlayerService) {}
 
   ngOnInit(): void {
     // this.loadSongs();
@@ -53,6 +55,16 @@ audioPlayer!: ElementRef<HTMLAudioElement>;
 
 
   }
+
+//   playSong(song: any) {
+
+//   this.playerService.playSong(
+//     song,
+//     this.songs
+//   );
+// }
+
+
 playSong(song: any): void {
   this.selectedSong = song;
   this.currentSongIndex = this.songs.indexOf(song);
