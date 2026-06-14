@@ -2,7 +2,6 @@
 
   <h1 class="page-title">Songs</h1>
 
-  <!-- SONG LIST -->
   <div class="song-list">
 
     <div class="song-card" *ngFor="let song of songs">
@@ -30,34 +29,37 @@
 
 </div>
 
-<!-- PLAYER -->
-<!-- MODERN MUSIC PLAYER -->
-<div *ngIf="selectedSong" class="player">
+
+
+
+
+
+<!-- <div *ngIf="selectedSong" class="player">
 
   <div class="player-header">
 
-    <div class="song-details">
+    <div class="song-details"> -->
 
-      <img
+      <!-- <img
         src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200"
         alt="Album"
         class="album-art"
-      >
+      > -->
 
-      <div class="song-meta">
+      <!-- <div class="song-meta">
         <h4>{{ selectedSong.title }}</h4>
         <p>{{ selectedSong.artist }}</p>
       </div>
 
-    </div>
+    </div> -->
 
     <!-- <button class="favorite-btn">
       ❤️
     </button> -->
 
-  </div>
+  <!-- </div> -->
 
-  <div class="player-controls">
+  <!-- <div class="player-controls">
 
     <button class="icon-btn" (click)="playPrevious()">
       ⏮
@@ -71,13 +73,17 @@
       ⏭
     </button>
 
-  </div>
+  </div> -->
 
-  <audio
+  <!-- <audio
     #audioPlayer
     controls
     autoplay
     [src]="selectedSong.songUrl">
-  </audio>
+  </audio> -->
 
-</div>
+  <!-- <button (click)="playSongs(songs)">
+  ▶ Play
+</button> -->
+
+<!-- </div> -->

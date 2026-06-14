@@ -1,16 +1,16 @@
-<div class="global-player" *ngIf="currentSong">
+<div class="global-player">
 
   <!-- Left -->
   <div class="player-left">
 
     <img
-      [src]="currentSong.imageUrl || 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300'"
-      class="album-cover"
-      alt="Album">
+      class="cover"
+      [src]="playerService.currentSong?.imageUrl || 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200'"
+      alt="cover">
 
     <div class="song-details">
-      <h4>{{ currentSong.title }}</h4>
-      <p>{{ currentSong.artist }}</p>
+      <h4>{{ playerService.currentSong?.title || 'No Song Playing' }}</h4>
+      <p>{{ playerService.currentSong?.artist || 'Select a song' }}</p>
     </div>
 
   </div>
@@ -20,21 +20,21 @@
 
     <div class="controls">
 
-      <button class="icon-btn" (click)="playPrevious()">
+      <button class="control-btn" (click)="playPrevious()">
         ⏮
       </button>
 
       <button class="play-btn" (click)="togglePlayPause()">
-        {{ isPlaying ? '⏸' : '▶' }}
+        {{ playerService.isPlaying ? '⏸' : '▶' }}
       </button>
 
-      <button class="icon-btn" (click)="playNext()">
+      <button class="control-btn" (click)="playNext()">
         ⏭
       </button>
 
     </div>
 
-    <div class="progress-container">
+    <div class="progress-wrapper">
 
       <span>{{ formatTime(currentTime) }}</span>
 
@@ -43,7 +43,7 @@
         min="0"
         [max]="duration"
         [value]="currentTime"
-        (input)="seek($event)"
+        (input)="seekAudio($event)"
         class="progress-bar">
 
       <span>{{ formatTime(duration) }}</span>
@@ -55,24 +55,23 @@
   <!-- Right -->
   <div class="player-right">
 
-    🔊
+    <button class="right-btn">
+      ❤️
+    </button>
 
-    <input
-      type="range"
-      min="0"
-      max="1"
-      step="0.1"
-      [value]="volume"
-      (input)="changeVolume($event)"
-      class="volume-slider">
+    <button class="right-btn">
+      🔊
+    </button>
 
   </div>
 
-  <audio
-    #audioPlayer
-    (timeupdate)="updateProgress()"
-    (loadedmetadata)="setDuration()"
-    (ended)="playNext()">
-  </audio>
+<audio
+  #audioPlayer
+  autoplay
+  [src]="playerService.currentSong?.songUrl"
+  (timeupdate)="updateProgress()"
+  (loadedmetadata)="setDuration()"
+  (ended)="playNext()">
+</audio>
 
 </div>

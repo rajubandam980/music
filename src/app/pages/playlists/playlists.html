@@ -1,104 +1,50 @@
-<div class="playlist-page">
+    <div class="playlist-page">
 
-  <h1>Playlists</h1>
+    <h1>Playlists</h1>
 
-  <!-- PLAYLIST GRID -->
-  <div class="playlist-grid" *ngIf="!selectedPlaylist">
+    <!-- PLAYLIST GRID -->
+    <div class="playlist-grid" *ngIf="!selectedPlaylist">
 
-    <div class="playlist-card"
-         *ngFor="let pl of playlists"
-         (click)="openPlaylist(pl)">
+        <div class="playlist-card"
+            *ngFor="let pl of playlists"
+            (click)="openPlaylist(pl)">
 
-      <img [src]="pl.imageUrl" />
+        <img [src]="pl.imageUrl" />
 
-      <h3>{{ pl.name }}</h3>
+        <h3>{{ pl.name }}</h3>
 
-    </div>
-
-  </div>
-
-  <!-- PLAYLIST DETAILS -->
-  <div class="playlist-details" *ngIf="selectedPlaylist">
-
-    <button class="back-btn" (click)="selectedPlaylist = null">
-      ← Back
-    </button>
-
-    <h2>{{ selectedPlaylist.name }}</h2>
-
-    <div class="song-list">
-
-      <div class="song-card"
-           *ngFor="let song of selectedPlaylist.songs; let i = index">
-
-        <div>
-          <h3>{{ song.title }}</h3>
-          <p>{{ song.artist }}</p>
         </div>
 
-        <button (click)="playSong(song, i)">
-          ▶ Play
+    </div>
+
+    <!-- PLAYLIST DETAILS -->
+    <div class="playlist-details" *ngIf="selectedPlaylist">
+
+        <button class="back-btn"
+                (click)="selectedPlaylist = null">
+        ← Back
         </button>
 
-      </div>
+        <h2>{{ selectedPlaylist.name }}</h2>
 
-    </div>
-  </div>
+        <div class="song-list">
 
-  <!-- PLAYER -->
-<div *ngIf="selectedSong" class="player">
+        <div class="song-card"
+            *ngFor="let song of selectedPlaylist.songs">
 
-  <div class="player-header">
+            <div>
+            <h3>{{ song.title }}</h3>
+            <p>{{ song.artist }}</p>
+            </div>
 
-    <div class="song-details">
+            <button (click)="playSong(song)">
+            ▶ Play
+            </button>
 
-      <img
-        src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200"
-        alt="Album"
-        class="album-art"
-      >
+        </div>
 
-      <div class="song-meta">
-        <h4>{{ selectedSong.title }}</h4>
-        <p>{{ selectedSong.artist }}</p>
-      </div>
+        </div>
 
     </div>
 
-    <!-- <button class="favorite-btn">
-      ❤️
-    </button> -->
-
-  </div>
-
-  <div class="player-controls">
-
-    <button class="icon-btn" (click)="playPrevious()">
-      ⏮
-    </button>
-
-      <button class="play-btn-main" (click)="togglePlayPause()">
-        {{ isPlaying ? '⏸' : '▶' }}
-      </button>
-
-    <button class="icon-btn" (click)="playNext()">
-      ⏭
-    </button>
-
-  </div>
-
-<audio
-  *ngIf="selectedSong"
-  #audioPlayer
-  controls
-  autoplay
-  [src]="selectedSong.songUrl"
-  (ended)="playNext()">
-</audio>
-
-</div>
-
-
-
-
-</div>
+    </div>

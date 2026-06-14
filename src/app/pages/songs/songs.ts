@@ -64,10 +64,13 @@ audioPlayer!: ElementRef<HTMLAudioElement>;
 //   );
 // }
 
-
 playSong(song: any): void {
-  this.selectedSong = song;
-  this.currentSongIndex = this.songs.indexOf(song);
+  // this.selectedSong = song;
+  // this.currentSongIndex = this.songs.indexOf(song);
+  this.playerService.playSong(
+    song,
+    this.songs
+  );  
 }
 
 playNext(): void {

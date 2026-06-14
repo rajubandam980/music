@@ -1,130 +1,130 @@
-import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { RouterModule } from '@angular/router';
+  import { CommonModule } from '@angular/common';
+  import { Component, ElementRef, ViewChild } from '@angular/core';
+  import { RouterModule } from '@angular/router';
+  import { PlayerService } from '../player.service';
 
-@Component({
-  selector: 'app-global-player',
-  imports: [CommonModule, RouterModule],
-  templateUrl: './global-player.html',
-  styleUrl: './global-player.scss',
-})
-export class GlobalPlayer {
+  @Component({
+    selector: 'app-global-player',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './global-player.html',
+    styleUrl: './global-player.scss',
+  })
+  export class GlobalPlayer {
 
-  @ViewChild('audioPlayer')
-  audioPlayer!: ElementRef<HTMLAudioElement>;
+    @ViewChild('audioPlayer')
+    audioPlayer!: ElementRef<HTMLAudioElement>;
+    
+    constructor(public playerService: PlayerService) {}
 
-  currentSong: any = null;
+    currentTime = 0;
 
-  playlist: any[] = [];
+    duration = 0;
 
-  currentIndex = -1;
+    volume = 1;
 
-  isPlaying = false;
 
-  currentTime = 0;
 
-  duration = 0;
+    togglePlayPause() {
+  const audio = this.audioPlayer.nativeElement;
 
-  volume = 1;
+  if (audio.paused) {
+    audio.play();
+    this.playerService.isPlaying = true;
+  } else {
+    audio.pause();
+    this.playerService.isPlaying = false;
+  }
+}
 
-  playSong(song: any, songs: any[]) {
+playNext() {
 
-    this.playlist = songs;
+  if (
+    this.playerService.currentIndex <
+    this.playerService.playlist.length - 1
+  ) {
 
-    this.currentSong = song;
+    this.playerService.currentIndex++;
 
-    this.currentIndex = songs.indexOf(song);
+    this.playerService.currentSong =
+      this.playerService.playlist[
+        this.playerService.currentIndex
+      ];
 
     const audio = this.audioPlayer.nativeElement;
 
-    audio.src = song.songUrl;
+    audio.src =
+      this.playerService.currentSong.songUrl;
 
     audio.load();
 
     audio.play();
 
-    this.isPlaying = true;
+    this.playerService.isPlaying = true;
   }
+}
 
-  togglePlayPause() {
+playPrevious() {
+
+  if (this.playerService.currentIndex > 0) {
+
+    this.playerService.currentIndex--;
+
+    this.playerService.currentSong =
+      this.playerService.playlist[
+        this.playerService.currentIndex
+      ];
 
     const audio = this.audioPlayer.nativeElement;
 
-    if (audio.paused) {
+    audio.src =
+      this.playerService.currentSong.songUrl;
 
-      audio.play();
+    audio.load();
 
-      this.isPlaying = true;
+    audio.play();
 
-    } else {
+    this.playerService.isPlaying = true;
+  }
+}
 
-      audio.pause();
+    updateProgress() {
 
-      this.isPlaying = false;
+      const audio = this.audioPlayer.nativeElement;
+
+      this.currentTime = audio.currentTime;
     }
-  }
-
-  playNext() {
-
-    if (this.currentIndex < this.playlist.length - 1) {
-
-      this.currentIndex++;
-
-      this.playSong(
-        this.playlist[this.currentIndex],
-        this.playlist
-      );
-    }
-  }
-
-  playPrevious() {
-
-    if (this.currentIndex > 0) {
-
-      this.currentIndex--;
-
-      this.playSong(
-        this.playlist[this.currentIndex],
-        this.playlist
-      );
-    }
-  }
-
-  updateProgress() {
-
-    const audio = this.audioPlayer.nativeElement;
-
-    this.currentTime = audio.currentTime;
-  }
 
   setDuration() {
+    const audio = this.audioPlayer.nativeElement;
 
-    this.duration =
-      this.audioPlayer.nativeElement.duration;
+    this.duration = audio.duration;
   }
 
-  seek(event: Event) {
+  seekAudio(event: Event) {
+    const value = +(event.target as HTMLInputElement).value;
 
-    const value =
-      +(event.target as HTMLInputElement).value;
+    const audio = this.audioPlayer.nativeElement;
 
-    this.audioPlayer.nativeElement.currentTime =
-      value;
+    audio.currentTime = value;
+
+    this.currentTime = value;
   }
 
-  changeVolume(event: Event) {
+    changeVolume(event: Event) {
 
-    const value =
-      +(event.target as HTMLInputElement).value;
+      const value =
+        +(event.target as HTMLInputElement).value;
 
-    this.volume = value;
+      this.volume = value;
 
-    this.audioPlayer.nativeElement.volume = value;
-  }
+      this.audioPlayer.nativeElement.volume = value;
+    }
 
   formatTime(seconds: number): string {
 
-    if (!seconds) return '0:00';
+    if (!seconds) {
+      return '0:00';
+    }
 
     const mins = Math.floor(seconds / 60);
 
@@ -132,4 +132,4 @@ export class GlobalPlayer {
 
     return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
   }
-}
+  }

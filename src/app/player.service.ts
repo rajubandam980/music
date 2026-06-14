@@ -24,7 +24,7 @@ export class PlayerService {
     this.isPlaying = true;
   }
 
-  nextSong() {
+  playNext() {
 
     if (this.currentIndex < this.playlist.length - 1) {
 
@@ -35,7 +35,7 @@ export class PlayerService {
     }
   }
 
-  previousSong() {
+  playPrevious() {
 
     if (this.currentIndex > 0) {
 
