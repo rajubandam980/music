@@ -61,7 +61,17 @@ loadPlaylists(): void {}
  playSong(song: any) {
   this.playerService.playSong(song, this.selectedPlaylist.songs);
 }
+playAll(): void {
+  if (!this.selectedPlaylist || !this.selectedPlaylist.songs?.length) {
+    return;
+  }
 
+  const firstSong = this.selectedPlaylist.songs[0];
 
+  this.playerService.playSong(
+    firstSong,
+    this.selectedPlaylist.songs
+  );
+}
   
 }
