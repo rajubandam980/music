@@ -4,13 +4,16 @@
 
   <div class="song-list">
 
-    <div class="song-card" *ngFor="let song of songs">
+    <div class="song-card"
+         *ngFor="let song of songs"
+         (click)="playSong(song)">
 
-      <div class="song-info">
+      <!-- LEFT -->
+      <div class="song-left">
 
-        <!-- <div class="song-avatar">
+        <div class="song-avatar">
           🎧
-        </div> -->
+        </div>
 
         <div class="song-text">
           <h3>{{ song.title }}</h3>
@@ -19,8 +22,9 @@
 
       </div>
 
-      <button class="play-btn" (click)="playSong(song)">
-        ▶ Play
+      <!-- RIGHT PLAY BUTTON -->
+      <button class="play-btn">
+        ▶
       </button>
 
     </div>
@@ -28,62 +32,3 @@
   </div>
 
 </div>
-
-
-
-
-
-
-<!-- <div *ngIf="selectedSong" class="player">
-
-  <div class="player-header">
-
-    <div class="song-details"> -->
-
-      <!-- <img
-        src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200"
-        alt="Album"
-        class="album-art"
-      > -->
-
-      <!-- <div class="song-meta">
-        <h4>{{ selectedSong.title }}</h4>
-        <p>{{ selectedSong.artist }}</p>
-      </div>
-
-    </div> -->
-
-    <!-- <button class="favorite-btn">
-      ❤️
-    </button> -->
-
-  <!-- </div> -->
-
-  <!-- <div class="player-controls">
-
-    <button class="icon-btn" (click)="playPrevious()">
-      ⏮
-    </button>
-
-      <button class="play-btn-main" (click)="togglePlayPause()">
-        {{ isPlaying ? '⏸' : '▶' }}
-      </button>
-
-    <button class="icon-btn" (click)="playNext()">
-      ⏭
-    </button>
-
-  </div> -->
-
-  <!-- <audio
-    #audioPlayer
-    controls
-    autoplay
-    [src]="selectedSong.songUrl">
-  </audio> -->
-
-  <!-- <button (click)="playSongs(songs)">
-  ▶ Play
-</button> -->
-
-<!-- </div> -->
