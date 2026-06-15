@@ -1,50 +1,50 @@
-    <div class="playlist-page">
+        <div class="playlist-page">
 
-    <h1>Playlists</h1>
+        <h1>Playlists</h1>
 
-    <!-- PLAYLIST GRID -->
-    <div class="playlist-grid" *ngIf="!selectedPlaylist">
+        <!-- PLAYLIST GRID -->
+        <div class="playlist-grid" *ngIf="!selectedPlaylist">
 
-        <div class="playlist-card"
-            *ngFor="let pl of playlists"
-            (click)="openPlaylist(pl)">
+            <div class="playlist-card"
+                *ngFor="let pl of playlists"
+                (click)="openPlaylist(pl)">
 
-        <img [src]="pl.imageUrl" />
+            <img [src]="pl.imageUrl" />
 
-        <h3>{{ pl.name }}</h3>
+            <h3>{{ pl.name }}</h3>
 
-        </div>
-
-    </div>
-
-    <!-- PLAYLIST DETAILS -->
-    <div class="playlist-details" *ngIf="selectedPlaylist">
-
-        <button class="back-btn"
-                (click)="selectedPlaylist = null">
-        ← Back
-        </button>
-
-        <h2>{{ selectedPlaylist.name }}</h2>
-
-        <div class="song-list">
-
-        <div class="song-card"
-            *ngFor="let song of selectedPlaylist.songs">
-
-            <div>
-            <h3>{{ song.title }}</h3>
-            <p>{{ song.artist }}</p>
             </div>
 
-            <button (click)="playSong(song)">
-            ▶ Play
+        </div>
+
+        <!-- PLAYLIST DETAILS -->
+        <div class="playlist-details" *ngIf="selectedPlaylist">
+
+            <button class="back-btn"
+                    (click)="selectedPlaylist = null">
+            ← Back
             </button>
 
-        </div>
+            <h2>{{ selectedPlaylist.name }}</h2>
+
+            <div class="song-list">
+
+            <div class="song-card"
+                *ngFor="let song of selectedPlaylist.songs">
+
+                <div>
+                <h3>{{ song.title }}</h3>
+                <p>{{ song.artist }}</p>
+                </div>
+
+                <button (click)="playSong(song)">
+                ▶ Play
+                </button>
+
+            </div>
+
+            </div>
 
         </div>
 
-    </div>
-
-    </div>
+        </div>

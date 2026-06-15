@@ -1,9 +1,19 @@
 import { Injectable } from '@angular/core';
+import { SONGS } from './data/songs-data';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PlayerService {
+
+  constructor() {
+  if (SONGS.length > 0) {
+    this.currentSong = SONGS[0];
+    this.playlist = SONGS;
+    this.currentIndex = 0;
+    this.isPlaying = false; // start paused
+  }
+}
 
   currentSong: any = null;
 
