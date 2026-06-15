@@ -70,9 +70,11 @@ playNext() {
 
     audio.load();
 
-    audio.play();
+    audio.oncanplay = () => {
+      audio.play().catch(() => {});
+    };
 
-    this.playerService.isPlaying = true;
+    this.playerService.isPlaying = true;  
   }
 }
 
