@@ -67,7 +67,6 @@
 
 <audio
   #audioPlayer
-  autoplay
   [src]="playerService.currentSong?.songUrl"
   (timeupdate)="updateProgress()"
   (loadedmetadata)="setDuration()"

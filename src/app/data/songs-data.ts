@@ -89,6 +89,54 @@ export const SONGS = [
     title: 'Hellallallo',
     artist: 'Ar Rahaman',
     songUrl: 'music/Hellallallo.mp3'
+  },
+  {
+    id:15,
+    title: 'Mounamelanoyi - SenSongsMp3.Co.mp3',
+    artist: 'S. Janaki, S. P. Balasubrahmanyam',
+    songUrl: 'music/evegreen/01 - Mounamelanoyi - SenSongsMp3.Co.mp3'
+  },
+  {
+    id:16,
+    title: 'Naa Cheli Rojave',
+    artist: 'S. P. Balasubrahmanyam, Sujatha | 🎼 A.R. Rahman',
+    songUrl: 'music/evegreen/03 - Naa Cheli Rojave - SenSongsMp3.Co.mp3'
+  },
+  {
+    id:17,
+    title: 'Ghal Ghal Ghal Ghal',
+    artist: 'S. P. Balasubrahmanyam, S. Janaki',
+    songUrl: 'music/evegreen/03 - Ghal Ghal Ghal Ghal  - SenSongsMp3.co.mp3'
+  },
+  {
+    id:18,
+    title: 'Pachchadanamey',
+    artist: 'K. S. Chithra | 🎼 A.R. Rahman',
+    songUrl: 'music/evegreen/06 - Pachchadanamey - SenSongsMp3.co.mp3'
+  },
+  {
+    id:19,
+    title: 'Bommanu Geesthey',
+    artist: 'S. P. Balasubrahmanyam, S. Janaki | 🎼 Devi Sri Prasad',
+    songUrl: 'music/evegreen/Bommanu Geesthey-SenSongsMp3.Co.mp3'
+  },
+  {
+    id:20,
+    title: 'Cheliya Cheliya',
+    artist: 'S. P. Balasubrahmanyam, S. Janaki | 🎼 Devi Sri Prasad',
+    songUrl: 'music/evegreen/Cheliya Cheliya-SenSongsMp3.Co.mp3'
+  },
+  {
+    id:21,
+    title: 'Em Sandheham Ledhu',
+    artist: 'S. P. Balasubrahmanyam, Sujatha | 🎼 A.R. Rahman',
+    songUrl: 'music/evegreen/Em Sandheham Ledhu-SenSongsMp3.Co.mp3'
+  },
+  {
+    id:22,
+    title: 'Vintunnavaa',
+    artist: 'S. P. Balasubrahmanyam, Sujatha | 🎼 A.R. Rahman'  ,
+    songUrl: 'music/evegreen/Vintunnavaa - SenSongsmp3.Co.mp3'
   }
 
 ];

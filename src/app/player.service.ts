@@ -15,6 +15,7 @@ export class PlayerService {
   }
 }
 
+shouldAutoPlay = false;
   currentSong: any = null;
 
   playlist: any[] = [];
@@ -32,6 +33,7 @@ export class PlayerService {
     this.currentIndex = playlist.indexOf(song);
 
     this.isPlaying = true;
+    this.shouldAutoPlay = true;
   }
 
   playNext() {

@@ -1,5 +1,5 @@
   import { CommonModule } from '@angular/common';
-  import { Component, ElementRef, ViewChild } from '@angular/core';
+  import { Component, ElementRef, ViewChild, AfterViewChecked } from '@angular/core';
   import { RouterModule } from '@angular/router';
   import { PlayerService } from '../player.service';
 
@@ -22,6 +22,19 @@
 
     volume = 1;
 
+
+    ngAfterViewChecked() {
+    if (
+      this.playerService.shouldAutoPlay &&
+      this.audioPlayer
+    ) {
+      const audio = this.audioPlayer.nativeElement;
+
+      audio.play();
+
+      this.playerService.shouldAutoPlay = false;
+    }
+  }
 
 
     togglePlayPause() {
