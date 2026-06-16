@@ -12,6 +12,10 @@ export const PLAYLISTS = [
       SONGS[13],
       SONGS[4],
       SONGS[7],
+      SONGS[1],
+      SONGS[2],
+      SONGS[3],
+      SONGS[8]
 
     ]
   },

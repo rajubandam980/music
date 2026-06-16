@@ -1,34 +1,65 @@
 <div class="songs-page">
 
   <h1 class="page-title"></h1>
+    <!-- SEARCH BAR -->
+<div class="search-box">
+  <span class="search-icon">🔍</span>
 
-  <div class="song-list">
+  <input
+    type="text"
+    placeholder="Search songs..."
+    [(ngModel)]="searchText"
+    (input)="filterSongs()">
+</div>
+
+<div class="song-list">
+
+  <div class="song-card"
+       *ngFor="let song of filteredSongs"
+       (click)="playSong(song)">
+
+    <div class="song-left">
+      <div class="song-text">
+        <h3>{{ song.title }}</h3>
+        <p>{{ song.artist }}</p>
+      </div>
+    </div>
+
+    <button class="play-btn">
+      ▶
+    </button>
+
+  </div>
+
+</div>
+
+  <!-- <div class="song-list">
 
     <div class="song-card"
          *ngFor="let song of songs"
-         (click)="playSong(song)">
+         (click)="playSong(song)"> -->
 
       <!-- LEFT -->
-      <div class="song-left">
+      <!-- <div class="song-left"> -->
 <!-- 
         <div class="song-avatar">
           🎧
         </div> -->  
 
-        <div class="song-text">
+        <!-- <div class="song-text">
           <h3>{{ song.title }}</h3>
           <p>{{ song.artist }}</p>
         </div>
 
-      </div>
+      </div> -->
 
       <!-- RIGHT PLAY BUTTON -->
-      <button class="play-btn">
+      <!-- <button class="play-btn">
         ▶
       </button>
 
     </div>
 
-  </div>
+  </div> -->
 
 </div>

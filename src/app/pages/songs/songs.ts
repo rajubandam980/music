@@ -27,11 +27,14 @@ audioPlayer!: ElementRef<HTMLAudioElement>;
   progress = 0;
 
   songs = SONGS;
+  searchText = '';
+  filteredSongs = SONGS;
 
   constructor(private songService: SongService,public playerService: PlayerService) {}
 
   ngOnInit(): void {
     // this.loadSongs();
+    this.filteredSongs = this.songs;
   }
 
   loadSongs(): void {
@@ -56,13 +59,16 @@ audioPlayer!: ElementRef<HTMLAudioElement>;
 
   }
 
-//   playSong(song: any) {
+filterSongs(): void {
+  const text = this.searchText.toLowerCase();
 
-//   this.playerService.playSong(
-//     song,
-//     this.songs
-//   );
-// }
+  this.filteredSongs = this.songs.filter(song =>
+    song.title.toLowerCase().includes(text) ||
+    song.artist.toLowerCase().includes(text)
+  );
+}
+
+
 
 playSong(song: any): void {
   // this.selectedSong = song;
