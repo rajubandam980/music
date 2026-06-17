@@ -137,6 +137,36 @@ export const SONGS = [
     title: 'Vintunnavaa',
     artist: 'S. P. Balasubrahmanyam, Sujatha | 🎼 A.R. Rahman'  ,
     songUrl: 'music/evegreen/Vintunnavaa - SenSongsmp3.Co.mp3'
+  },
+  {
+    id:23,
+    title:'Inumulo O Hridayam',
+    artist:'A. R. Rahman, Suzanne, Kash n Krissy',
+    songUrl:'music/Inumulo O Hridayam.mp3'
+  },
+  {
+    id:24,
+    title: 'Neelo Valupu',
+    artist:'Vijay Prakash, Shreya Ghoshal',
+    songUrl: 'music/Neelo Valapu.mp3'
+  },
+  {
+    id: 25,
+    title: 'Yemaindhi Ee Vela',
+    artist: 'Udit Narayan, Chorus',
+    songUrl: 'music/evegreen/01 - Yemaindhi Ee Vela - SenSongsMp3.co.mp3'
+  },
+  {
+    id: 26,
+    title: 'O Baby',
+    artist: 'Hari Charan, Jenny, Mathangi, Bhargavi',
+    aongUrl: 'music/evegreen/03 - O Baby - SenSongsMp3.co.mp3'
+  },
+  {
+    id: 27,
+    title: 'Allantha Doorala',
+    artist: 'S.P. Balu',
+    songUrl: 'music/evegreen/05 - Allantha Doorala  - SenSongsMp3.co.mp3'
   }
 
 ];

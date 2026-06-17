@@ -7,15 +7,17 @@ export const PLAYLISTS = [
     imageUrl: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500',
     songs: [
       SONGS[0],
-      SONGS[5],
       SONGS[6],
       SONGS[13],
       SONGS[4],
       SONGS[7],
-      SONGS[1],
       SONGS[2],
       SONGS[3],
-      SONGS[8]
+      SONGS[22],
+      SONGS[23],
+      SONGS[24],
+      SONGS[25],
+      SONGS[26]
 
     ]
   },
@@ -54,7 +56,10 @@ export const PLAYLISTS = [
     name: '90s Telugu Classics',
     imageUrl: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=500',
     songs: [
-      SONGS[4]
+      SONGS[4],
+      SONGS[14],
+      SONGS[15],
+      SONGS[16],
     ]
    
   },
@@ -64,7 +69,9 @@ export const PLAYLISTS = [
     name: 'Melody Mix',
     imageUrl: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200',
     songs: [
-      SONGS[4]
+      SONGS[4],
+      SONGS[16],
+      SONGS[17],
     ]
   },
   {
@@ -94,6 +101,8 @@ export const PLAYLISTS = [
       SONGS[19],
       SONGS[20],
       SONGS[21],
+      SONGS[1],
+      SONGS[5]
     ]
   },
 ];
