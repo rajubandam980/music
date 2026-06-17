@@ -160,7 +160,7 @@ export const SONGS = [
     id: 26,
     title: 'O Baby',
     artist: 'Hari Charan, Jenny, Mathangi, Bhargavi',
-    aongUrl: 'music/evegreen/03 - O Baby - SenSongsMp3.co.mp3'
+    songUrl: 'music/evegreen/03 - O Baby - SenSongsMp3.co.mp3'
   },
   {
     id: 27,
