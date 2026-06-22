@@ -6,6 +6,9 @@ import { SONGS } from './data/songs-data';
 })
 export class PlayerService {
 
+  shuffle = false;
+  repeat = false;
+
   constructor() {
   if (SONGS.length > 0) {
     this.currentSong = SONGS[0];

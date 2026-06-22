@@ -23,18 +23,20 @@
     volume = 1;
 
 
-    ngAfterViewChecked() {
-    if (
-      this.playerService.shouldAutoPlay &&
-      this.audioPlayer
-    ) {
-      const audio = this.audioPlayer.nativeElement;
+ngAfterViewChecked() {
 
-      audio.play();
+  if (
+    this.playerService.currentSong &&
+    this.playerService.isPlaying
+  ) {
 
-      this.playerService.shouldAutoPlay = false;
+    const audio = this.audioPlayer.nativeElement;
+
+    if (audio.paused) {
+      audio.play().catch(() => {});
     }
   }
+}
 
 
     togglePlayPause() {
@@ -51,31 +53,55 @@
 
 playNext() {
 
-  if (
-    this.playerService.currentIndex <
-    this.playerService.playlist.length - 1
-  ) {
+  // SHUFFLE MODE
+  if (this.playerService.shuffle) {
+
+    const randomIndex =
+      Math.floor(
+        Math.random() *
+        this.playerService.playlist.length
+      );
+
+    this.playerService.currentIndex =
+      randomIndex;
+
+  } else {
 
     this.playerService.currentIndex++;
 
-    this.playerService.currentSong =
-      this.playerService.playlist[
-        this.playerService.currentIndex
-      ];
-
-    const audio = this.audioPlayer.nativeElement;
-
-    audio.src =
-      this.playerService.currentSong.songUrl;
-
-    audio.load();
-
-    audio.oncanplay = () => {
-      audio.play().catch(() => {});
-    };
-
-    this.playerService.isPlaying = true;  
   }
+
+  // REPEAT PLAYLIST
+  if (
+    this.playerService.currentIndex >=
+    this.playerService.playlist.length
+  ) {
+
+    if (this.playerService.repeat) {
+
+      this.playerService.currentIndex = 0;
+
+    } else {
+
+      return;
+    }
+  }
+
+  this.playerService.currentSong =
+    this.playerService.playlist[
+      this.playerService.currentIndex
+    ];
+
+  const audio = this.audioPlayer.nativeElement;
+
+  audio.src =
+    this.playerService.currentSong.songUrl;
+
+  // audio.load();
+
+  // audio.play();
+
+  this.playerService.isPlaying = true;
 }
 
 playPrevious() {
@@ -147,4 +173,14 @@ playPrevious() {
 
     return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
   }
+
+  toggleShuffle() {
+  this.playerService.shuffle =
+    !this.playerService.shuffle;
+}
+
+toggleRepeat() {
+  this.playerService.repeat =
+    !this.playerService.repeat;
+}
   }

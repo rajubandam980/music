@@ -15,26 +15,7 @@
 
   </div>
 
-  <!-- Center -->
-  <div class="player-center">
-
-    <div class="controls">
-
-      <button class="control-btn" (click)="playPrevious()">
-        ⏮
-      </button>
-
-      <button class="play-btn" (click)="togglePlayPause()">
-        {{ playerService.isPlaying ? '⏸' : '▶' }}
-      </button>
-
-      <button class="control-btn" (click)="playNext()">
-        ⏭
-      </button>
-
-    </div>
-
-    <div class="progress-wrapper">
+      <div class="progress-wrapper">
 
       <span>{{ formatTime(currentTime) }}</span>
 
@@ -49,6 +30,38 @@
       <span>{{ formatTime(duration) }}</span>
 
     </div>
+
+  <!-- Center -->
+  <div class="player-center">
+
+    <div class="controls">
+    <button
+    class="icon-btn"
+    [class.active]="playerService.shuffle"
+    (click)="toggleShuffle()">
+    🔀
+    </button>
+
+      <button class="control-btn" (click)="playPrevious()">
+        ⏮
+      </button>
+
+      <button class="play-btn" (click)="togglePlayPause()">
+        {{ playerService.isPlaying ? '⏸' : '▶' }}
+      </button>
+
+      <button class="control-btn" (click)="playNext()">
+        ⏭
+      </button>
+        <button
+    class="icon-btn"
+    [class.active]="playerService.repeat"
+    (click)="toggleRepeat()">
+    🔁
+  </button>
+
+    </div>
+
 
   </div>
 

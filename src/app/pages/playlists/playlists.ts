@@ -61,6 +61,12 @@ loadPlaylists(): void {}
  playSong(song: any) {
   this.playerService.playSong(song, this.selectedPlaylist.songs);
 }
+
+
+
+
+
+
 playAll(): void {
   if (!this.selectedPlaylist || !this.selectedPlaylist.songs?.length) {
     return;
