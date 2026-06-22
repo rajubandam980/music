@@ -69,9 +69,15 @@
 
       </div>
 
-      <button class="play-btn" (click)="playSong(song)">
-        ▶
-      </button>
+<button class="play-btn" (click)="playSong(song)">
+  <span *ngIf="playerService.currentSong?.id === song.id && playerService.isPlaying">
+    ⏸
+  </span>
+
+  <span *ngIf="playerService.currentSong?.id !== song.id || !playerService.isPlaying">
+    ▶
+  </span>
+</button>
 
     </div>
 

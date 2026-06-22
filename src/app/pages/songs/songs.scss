@@ -114,6 +114,21 @@
   }
 }
 
+.song-cover {
+  width: 60px;
+  height: 60px;
+
+  object-fit: cover;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.3);
+}
+.song-card.active {
+  background: rgba(29, 185, 84, 0.2);
+  border-left: 4px solid #1db954;
+  transform: scale(1.02);
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
   .songs-page {

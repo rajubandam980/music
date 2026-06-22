@@ -4,4 +4,5 @@ export interface Song {
   artist: string;
   songUrl: string;
   playlistId?: number;
+  imageUrl: string;
 }

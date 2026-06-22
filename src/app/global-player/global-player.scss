@@ -27,14 +27,18 @@
 .player-left {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 
-  width: 25%;
+  min-width: 180px;
+  flex-shrink: 0;
 }
 
 .cover {
-  width: 58px;
-  height: 58px;
+  width: 52px;
+  height: 52px;
+
+  min-width: 52px;
+  min-height: 52px;
 
   border-radius: 10px;
   object-fit: cover;
@@ -208,40 +212,27 @@
 @media (max-width: 768px) {
 
   .global-player {
-    height: auto;
-
-    flex-direction: column;
-
-    gap: 12px;
-
-    padding: 12px;
-  }
-
-  .player-left,
-  .player-center,
-  .player-right {
-    width: 100%;
+    flex-direction: row; /* KEEP HORIZONTAL like laptop */
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
   }
 
   .player-left {
-    justify-content: center;
+    flex: 1;
+    min-width: 0;
   }
 
-  .player-right {
-    justify-content: center;
+  .song-info h4 {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
   }
 
-  .controls {
-    gap: 20px;
+  .song-info p {
+    font-size: 10px;
   }
 
-  .play-btn {
-    width: 44px;
-    height: 44px;
-  }
-
-  .cover {
-    width: 50px;
-    height: 50px;
-  }
 }

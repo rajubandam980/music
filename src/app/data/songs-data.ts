@@ -4,7 +4,8 @@ export const SONGS = [
     id: 1,
     title: 'Chikiri Chikiri',
     artist: 'A.R. Rahman',
-    songUrl: 'music/Chikiri Chikiri.mp3'
+    songUrl: 'music/Chikiri Chikiri.mp3',
+    imageUrl: 'https://images.unsplash.com/photo-1499363536502-87642509e31b?w=500'
   },
 
   {

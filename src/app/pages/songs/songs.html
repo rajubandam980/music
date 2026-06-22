@@ -16,18 +16,29 @@
 
   <div class="song-card"
        *ngFor="let song of filteredSongs"
+       [class.active]="song.id === playerService.currentSong?.id"
        (click)="playSong(song)">
 
     <div class="song-left">
+      <img [src]="song.imageUrl" class="song-cover" alt="cover">
       <div class="song-text">
         <h3>{{ song.title }}</h3>
         <p>{{ song.artist }}</p>
       </div>
     </div>
 
-    <button class="play-btn">
-      ▶
-    </button>
+<button class="play-btn"
+        (click)="playSong(song)">
+
+  <span *ngIf="playerService.currentSong?.id === song.id && playerService.isPlaying">
+    ⏸
+  </span>
+
+  <span *ngIf="playerService.currentSong?.id !== song.id || !playerService.isPlaying">
+    ▶
+  </span>
+
+</button>
 
   </div>
 

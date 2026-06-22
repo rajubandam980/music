@@ -43,7 +43,7 @@ audioPlayer!: ElementRef<HTMLAudioElement>;
     private playlistService: PlaylistService,
     private songService: SongService,
     private cd: ChangeDetectorRef,
-    private playerService: PlayerService
+    public playerService: PlayerService
     ){
       console.log('PLAYLIST COMPONENT CREATED');
   }
