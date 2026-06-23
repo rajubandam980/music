@@ -10,7 +10,7 @@ export class Profile {
 
     user = {
     name: 'Raju Bandam',
-    email: 'raju@eicloud.com',
+    email: 'raju@icloud.com',
     favoriteGenre: 'Telugu Hits'
   };  
 

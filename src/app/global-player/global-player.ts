@@ -120,9 +120,9 @@ playPrevious() {
     audio.src =
       this.playerService.currentSong.songUrl;
 
-    audio.load();
+    // audio.load();
 
-    audio.play();
+    // audio.play();
 
     this.playerService.isPlaying = true;
   }

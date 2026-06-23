@@ -54,34 +54,52 @@
   </div>
 
   <!-- 🔥 SONG LIST -->
-  <div class="song-list">
+<div class="song-list">
 
-    <div class="song-card"
-         *ngFor="let song of selectedPlaylist.songs; let i = index">
+  <div
+    class="song-card"
+    *ngFor="let song of selectedPlaylist.songs"
+    (click)="playSong(song)">
 
-      <div class="song-info">
+    <!-- LEFT -->
+    <div class="song-left">
 
+      <img
+        [src]="song.imageUrl"
+        class="song-cover"
+        alt="cover">
 
-        <div class="song-text">
+      <div class="song-text">
         <h3>{{ song.title }}</h3>
         <p>{{ song.artist }}</p>
-        </div>
-
       </div>
-
-<button class="play-btn" (click)="playSong(song)">
-  <span *ngIf="playerService.currentSong?.id === song.id && playerService.isPlaying">
-    ⏸
-  </span>
-
-  <span *ngIf="playerService.currentSong?.id !== song.id || !playerService.isPlaying">
-    ▶
-  </span>
-</button>
 
     </div>
 
+    <!-- RIGHT -->
+    <button class="play-btn">
+
+      <span
+        *ngIf="
+          playerService.currentSong?.id === song.id &&
+          playerService.isPlaying
+        ">
+        ⏸
+      </span>
+
+      <span
+        *ngIf="
+          playerService.currentSong?.id !== song.id ||
+          !playerService.isPlaying
+        ">
+        ▶
+      </span>
+
+    </button>
+
   </div>
+
+</div>
 
 </div>
 

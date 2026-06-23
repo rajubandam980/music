@@ -8,6 +8,7 @@ import { Playlist } from '../../models/playlist.model';
 import { ViewChild, ElementRef } from '@angular/core';
 import { PLAYLISTS } from '../../data/playlists-data';
 import { PlayerService } from '../../player.service';
+import { SONGS } from '../../data/songs-data';
 
 
 
@@ -21,6 +22,7 @@ import { PlayerService } from '../../player.service';
 export class Playlists implements OnInit{
 
   testMessage = 'RAJU PLAYLIST COMPONENT';
+    filteredSongs = SONGS;
 
   @ViewChild('audioPlayer')
 audioPlayer!: ElementRef<HTMLAudioElement>;
@@ -31,7 +33,7 @@ audioPlayer!: ElementRef<HTMLAudioElement>;
 
 
 
-  songs: any[] = [];
+  songs = SONGS;
   selectedPlaylistId: number | null = null;
   selectedSong: any = null;
   selectedPlaylist: any = null;
@@ -49,7 +51,7 @@ audioPlayer!: ElementRef<HTMLAudioElement>;
   }
     ngOnInit(): void {
       console.log('Playlists Loaded');
-    this.loadPlaylists();
+    this.filteredSongs = this.songs;
      
 
   }
