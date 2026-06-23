@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { Home } from './pages/home/home';
-import { Login } from './pages/login/login';
-import { Register } from './pages/register/register';
+// import { Login } from './pages/login/login';
+// import { Register } from './pages/register/register';
 import { Songs } from './pages/songs/songs';
 import { Playlists } from './pages/playlists/playlists';
 import { Admin } from './pages/admin/admin';
@@ -13,14 +13,14 @@ export const routes: Routes = [
     {
         path:"", component:Home
     },
-    {
-    path: 'login',
-    component: Login
-    },
-    {
-        path: 'register',
-        component: Register
-    },
+    // {
+    // path: 'login',
+    // component: Login
+    // },
+    // {
+    //     path: 'register',
+    //     component: Register
+    // },
     {
     path: 'songs',
     component: Songs
@@ -29,11 +29,11 @@ export const routes: Routes = [
     path: 'playlists',
     component: Playlists
   },
-  {
-    path: 'admin',
-    component: Admin
-  },
-  {
+  // {
+  //   path: 'admin',
+  //   component: Admin
+  // },
+  { 
     path: 'profile',
     component: Profile
   }
