@@ -79,11 +79,11 @@ export const PLAYLISTS = [
     name: 'Folk Songs',
     imageUrl: 'https://images.unsplash.com/photo-1501612780327-45045538702b?w=500',
     songs: [
-        SONGS[8],
-        SONGS[9],
-        SONGS[10],
-        SONGS[11],
-        SONGS[12],
+        // SONGS[8],
+        // SONGS[9],
+        // SONGS[10],
+        // SONGS[11],
+        // SONGS[12],
   
             ]
   },

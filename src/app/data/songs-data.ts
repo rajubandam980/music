@@ -24,14 +24,14 @@ export const SONGS = [
     imageUrl: 'Images/ab67616d00001e02d03dbbc402c71083f8cd749d.jpeg'
   },
 
-  {
-    id: 4,
-    title: 'Peene Ke Baad',
-    artist: 'Rahul',
-    songUrl: 'music/Peene Ke Baad Kick Ass.mp3',
-    imageUrl: 'Images/ab67616d0000b27368eaea067e0ca58145cfb667.jpeg'
+  // {
+  //   id: 4,
+  //   title: 'Peene Ke Baad',
+  //   artist: 'Rahul',
+  //   songUrl: 'music/Peene Ke Baad Kick Ass.mp3',
+  //   imageUrl: 'Images/ab67616d0000b27368eaea067e0ca58145cfb667.jpeg'
 
-  },
+  // },
 
   {
     id: 5,
@@ -63,20 +63,20 @@ export const SONGS = [
     songUrl: 'music/folksongs/Chamkeela Angeelesi.mp3',
     imageUrl: 'Images/chamkila.jpg'
   },
-  {
-    id:9,
-    title: 'Daripontothundu ',
-    artist: 'Ram Miriyala, Dhee',
-    songUrl: 'music/folksongs/Daripontothundu.mp3',
-    imageUrl: 'Images/darinapothunadu.jpeg'
-  },
-  {
-    id:10,
-    title: 'Endi Kondalu Eletoda',
-    artist: 'Mangli',
-    songUrl: 'music/folksongs/Endi Kondalu Eletoda.mp3',
-    imageUrl: 'Images/shivaratri.jpg'
-  },
+  // {
+  //   id:9,
+  //   title: 'Daripontothundu ',
+  //   artist: 'Ram Miriyala, Dhee',
+  //   songUrl: 'music/folksongs/Daripontothundu.mp3',
+  //   imageUrl: 'Images/darinapothunadu.jpeg'
+  // },
+  // {
+  //   id:10,
+  //   title: 'Endi Kondalu Eletoda',
+  //   artist: 'Mangli',
+  //   songUrl: 'music/folksongs/Endi Kondalu Eletoda.mp3',
+  //   imageUrl: 'Images/shivaratri.jpg'
+  // },
   {
     id:11,
     title: 'Koyila',
@@ -84,20 +84,20 @@ export const SONGS = [
     songUrl: 'music/folksongs/Koyila.mp3',
     imageUrl: 'Images/koyila.jpeg'
   },
-  {
-    id:12,
-    title: 'Mamidi Konala Meena',
-    artist: 'Madhu Priya, Nagavva',
-    songUrl: 'music/folksongs/Mamidi Konala Meena.mp3',
-    imageUrl: 'Images/mamidi.jpg'
-  },
-  {
-    id:13,
-    title: 'Ranu Bombai Ki Ranu',
-    artist: 'Janhavi Yerram',
-    songUrl: 'music/folksongs/RANU BOMBAI KI RANU.mp3',
-    imageUrl: 'Images/ranubombaiki.jpeg'
-  },
+  // {
+  //   id:12,
+  //   title: 'Mamidi Konala Meena',
+  //   artist: 'Madhu Priya, Nagavva',
+  //   songUrl: 'music/folksongs/Mamidi Konala Meena.mp3',
+  //   imageUrl: 'Images/mamidi.jpg'
+  // },
+  // {
+  //   id:13,
+  //   title: 'Ranu Bombai Ki Ranu',
+  //   artist: 'Janhavi Yerram',
+  //   songUrl: 'music/folksongs/RANU BOMBAI KI RANU.mp3',
+  //   imageUrl: 'Images/ranubombaiki.jpeg'
+  // },
   {
     id:14,
     title: 'Hellallallo',
