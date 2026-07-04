@@ -1,71 +1,109 @@
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
-  
-
-  height: 70px;
-
-  background: #121212;
-  border-top: 1px solid #2a2a2a;
+  z-index: 1000;
 
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-between;
 
-  z-index: 1000;
+  padding: 12px 16px;
+
+  background: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: white;
 }
 
-.navbar a {
+/* LEFT */
+.nav-left .logo {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 8px;
 
   text-decoration: none;
-  color: #b3b3b3;
+  color: white;
+}
 
+.logo-text {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* CENTER (HIDDEN ON MOBILE BUT SHOWN ON DESKTOP) */
+.nav-center {
+  display: none;
+  gap: 20px;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: #b3b3b3;
+  font-weight: 500;
   transition: 0.3s;
 }
 
-.navbar a span {
-  font-size: 22px;
+.nav-center a:hover {
+  color: white;
 }
 
-.navbar a small {
-  font-size: 11px;
-  margin-top: 4px;
-}
-
-.navbar a:hover,
-.navbar a.active {
+.nav-center a.active {
   color: #1db954;
 }
 
-/* Desktop */
-@media (min-width: 769px) {
-  .navbar {
-    top: 0;
-    bottom: auto;
-
-    height: 70px;
-
-    border-top: none;
-    border-bottom: 1px solid #2a2a2a;
-  }
-
-  .navbar a {
-    flex-direction: row;
-    gap: 8px;
-  }
-
-  .navbar a small {
-    font-size: 14px;
-    margin-top: 0;
-  }
+/* RIGHT */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-app-navbar {
-  position: sticky;
-  top: 0;
-  z-index: 200;
+
+/* BUTTONS */
+.login-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.signup-btn {
+  background: #1db954;
+  border: none;
+  color: white;
+
+  padding: 6px 12px;
+  border-radius: 20px;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 768px) {
+
+.nav-center {
+  display: flex;
+  gap: 16px;
+
+  overflow-x: auto;
+  white-space: nowrap;
+
+  max-width: 60vw;
+  scrollbar-width: none;
+}
+
+.nav-center::-webkit-scrollbar {
+  display: none;
+}
+
+  .navbar {
+    padding: 14px 30px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+  
 }

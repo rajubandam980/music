@@ -1,23 +1,35 @@
 <nav class="navbar">
 
-  <a routerLink="/" routerLinkActive="active">
-    <span>🏠</span>
-    <small>Home</small>
-  </a>
+  <!-- LEFT: LOGO -->
+  <div class="nav-left">
+    <a routerLink="/" class="logo">
+      <!-- <span class="logo-icon">🎵</span> -->
+      <span class="logo-text">R Music</span>
+    </a>
+  </div>
 
-  <a routerLink="/songs" routerLinkActive="active">
-    <span>🎵</span>
-    <small>Songs</small>
-  </a>
+  <!-- CENTER: MENU -->
+  <div class="nav-center">
 
-  <a routerLink="/playlists" routerLinkActive="active">
-    <span>📂</span>
-    <small>Playlists</small>
-  </a>
+    <a routerLink="/" routerLinkActive="active">Home</a>
 
-  <a routerLink="/profile" routerLinkActive="active">
-    <span>👤</span>
-    <small>Profile</small>
-  </a>
+    <a routerLink="/songs" routerLinkActive="active">Songs</a>
+
+    <a routerLink="/playlists" routerLinkActive="active">Playlists</a>
+
+    <!-- <a routerLink="/podcasts" routerLinkActive="active">Podcasts</a>
+
+    <a routerLink="/pro" class="pro">Go Pro</a> -->
+
+  </div>
+
+  <!-- RIGHT: AUTH -->
+  <div class="nav-right">
+
+    <button class="login-btn">Login</button>
+
+    <button class="signup-btn">Sign Up</button>
+
+  </div>
 
 </nav>

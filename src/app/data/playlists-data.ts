@@ -95,14 +95,15 @@ export const PLAYLISTS = [
     
       SONGS[14],
       SONGS[15],
-      SONGS[16],
+      SONGS[29],
       SONGS[17],
-      SONGS[18],
+
       SONGS[19],
       SONGS[20],
       SONGS[21],
       SONGS[1],
-      SONGS[5]
+
+      SONGS[28]
     ]
   },
 ];

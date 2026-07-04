@@ -202,6 +202,20 @@ export const SONGS = [
     artist: 'Gowrahari, Krishna Kanth',
     songUrl: 'music/Vibe-Undi-Krishna-Kanth-NaaSongs.mp3',
     imageUrl: 'Images/vibeundhi.jpeg',
+  },
+  {
+    id:29,
+    title: 'Preminche Premavaa',
+    artist: 'Shreya Ghoshal, Naresh Iyer',
+    songUrl: 'music/evegreen/02 - Preminche Premavaa  - SenSongsMp3.co.mp3',
+    imageUrl: 'Images/Nuvvu-Nenu-Prema-2006jpeg.jpg'
+  },
+  {
+    id:30,
+    title: 'Newyork Nagaram',
+    artist: 'A.R.Rahman',
+    songUrl: 'music/evegreen/03 - Newyork Nagaram  - SenSongsMp3.co.mp3',
+    imageUrl: 'Images/Nuvvu-Nenu-Prema-2006jpeg.jpg'
   }
 
 ];
