@@ -7,20 +7,22 @@ import { Playlists } from './pages/playlists/playlists';
 import { Admin } from './pages/admin/admin';
 import { PlaylistDetails } from './pages/playlist-details/playlist-details';
 import { Profile } from './components/profile/profile';
+import { Login } from './pages/login/login';
+import { Register } from './pages/register/register';
 
 export const routes: Routes = [
 
     {
         path:"", component:Home
     },
-    // {
-    // path: 'login',
-    // component: Login
-    // },
-    // {
-    //     path: 'register',
-    //     component: Register
-    // },
+    {
+    path: 'login',
+    component: Login
+    },
+    {
+        path: 'register',
+        component: Register
+    },
     {
     path: 'songs',
     component: Songs

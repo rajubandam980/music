@@ -47,10 +47,10 @@ audioPlayer!: ElementRef<HTMLAudioElement>;
     private cd: ChangeDetectorRef,
     public playerService: PlayerService
     ){
-      console.log('PLAYLIST COMPONENT CREATED');
+      // console.log('PLAYLIST COMPONENT CREATED');
   }
     ngOnInit(): void {
-      console.log('Playlists Loaded');
+      // console.log('Playlists Loaded');
     this.filteredSongs = this.songs;
      
 

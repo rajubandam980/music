@@ -95,6 +95,12 @@
   font-weight: 600;
   cursor: pointer;
 }
+.login-btn,
+.signup-btn {
+  text-decoration: none !important;
+  border: none;
+  outline: none;
+}
 
 /* ================= DESKTOP ================= */
 @media (min-width: 768px) {
