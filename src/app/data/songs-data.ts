@@ -1,7 +1,7 @@
 export const SONGS = [
 
   {
-    id: 1,
+    id: 0,
     title: 'Chikiri Chikiri',
     artist: 'A.R. Rahman',
     songUrl: 'music/Chikiri Chikiri.mp3',
@@ -9,7 +9,7 @@ export const SONGS = [
   },
 
   {
-    id: 2,
+    id: 1,
     title: 'Valukanula Dana',
     artist: 'Unni Menon',
     songUrl: 'music/Valukanula dana.mp3',
@@ -17,7 +17,7 @@ export const SONGS = [
   },
 
   {
-    id: 3,
+    id: 2,
     title: 'Rubaroo',
     artist: 'Sid',
     songUrl: 'music/Rubaroo.mp3',
@@ -34,7 +34,7 @@ export const SONGS = [
   // },
 
   {
-    id: 5,
+    id: 3,
     title: 'Rai Rai Raa Raa',
     artist: 'Armaan Malik',
     songUrl: 'music/Rai Rai Raa Raa.mp3',
@@ -42,7 +42,7 @@ export const SONGS = [
   },
 
   {
-    id: 6,
+    id: 4,
     title: 'Hrudayama',
     artist: 'Sid Sriram',
     songUrl: 'music/Hrudayama.mp3',
@@ -50,14 +50,14 @@ export const SONGS = [
   },
 
   {
-    id: 7,
+    id: 5,
     title: 'Chusane',
     artist: 'Sid Sriram',
     songUrl: 'music/Chusane.mp3',
     imageUrl: 'Images/srkal.jpeg'
   },
   {
-    id: 8,
+    id: 6,
     title: 'Chamkela angeelesi',
     artist: 'Ram Miriyala, Dhee',
     songUrl: 'music/folksongs/Chamkeela Angeelesi.mp3',
@@ -78,7 +78,7 @@ export const SONGS = [
   //   imageUrl: 'Images/shivaratri.jpg'
   // },
   {
-    id:11,
+    id:7,
     title: 'Koyila',
     artist: 'Vijai Bulganin',
     songUrl: 'music/folksongs/Koyila.mp3',
@@ -99,123 +99,137 @@ export const SONGS = [
   //   imageUrl: 'Images/ranubombaiki.jpeg'
   // },
   {
-    id:14,
+    id:8,
     title: 'Hellallallo',
     artist: 'Ar Rahaman',
     songUrl: 'music/Hellallallo.mp3',
     imageUrl: 'Images/helelo.jpeg'
   },
   {
-    id:15,
+    id:9,
     title: 'Mounamelanoyi',
     artist: 'S. Janaki, S. P. Balasubrahmanyam',
     songUrl: 'music/evegreen/01 - Mounamelanoyi - SenSongsMp3.Co.mp3',
     imageUrl: 'Images/kamal.jpg'
   },
   {
-    id:16,
+    id:10,
     title: 'Naa Cheli Rojave',
     artist: 'S. P. Balasubrahmanyam, Sujatha | 🎼 A.R. Rahman',
     songUrl: 'music/evegreen/03 - Naa Cheli Rojave - SenSongsMp3.Co.mp3',
     imageUrl: 'Images/rojaroja.jpeg'
   },
   {
-    id:17,
+    id:11,
     title: 'Ghal Ghal Ghal Ghal',
     artist: 'S. P. Balasubrahmanyam, S. Janaki',
     songUrl: 'music/evegreen/03 - Ghal Ghal Ghal Ghal  - SenSongsMp3.co.mp3',
     imageUrl: 'Images/ghalghal.jpeg'
   },
   {
-    id:18,
+    id:12,
     title: 'Pachchadanamey',
     artist: 'K. S. Chithra | 🎼 A.R. Rahman',
     songUrl: 'music/evegreen/06 - Pachchadanamey - SenSongsMp3.co.mp3',
     imageUrl: 'Images/Premikula-Roju-Telugu-1999-20191016112959-500x500.jpg'
   },
   {
-    id:19,
+    id:13,
     title: 'Bommanu Geesthey',
     artist: 'S. P. Balasubrahmanyam, S. Janaki | 🎼 Devi Sri Prasad',
     songUrl: 'music/evegreen/Bommanu Geesthey-SenSongsMp3.Co.mp3',
     imageUrl: 'Images/bomanu.jpg'
   },
   {
-    id:20,
+    id:14,
     title: 'Cheliya Cheliya',
     artist: 'S. P. Balasubrahmanyam, S. Janaki | 🎼 Devi Sri Prasad',
     songUrl: 'music/evegreen/Cheliya Cheliya-SenSongsMp3.Co.mp3',
     imageUrl: 'Images/kushi.jpg'
   },
   {
-    id:21,
+    id:15,
     title: 'Em Sandheham Ledhu',
     artist: 'S. P. Balasubrahmanyam, Sujatha | 🎼 A.R. Rahman',
     songUrl: 'music/evegreen/Em Sandheham Ledhu-SenSongsMp3.Co.mp3',
     imageUrl: 'Images/huhalugusa.png'
   },
   {
-    id:22,
+    id:16,
     title: 'Vintunnavaa',
     artist: 'S. P. Balasubrahmanyam, Sujatha | 🎼 A.R. Rahman'  ,
     songUrl: 'music/evegreen/Vintunnavaa - SenSongsmp3.Co.mp3',
     imageUrl: 'Images/vintunava.jpeg'
   },
   {
-    id:23,
+    id:17,
     title:'Inumulo O Hridayam',
     artist:'A. R. Rahman, Suzanne, Kash n Krissy',
     songUrl:'music/Inumulo O Hridayam.mp3',
     imageUrl: 'Images/robo.webp'
   },
   {
-    id:24,
+    id:18,
     title: 'Neelo Valupu',
     artist:'Vijay Prakash, Shreya Ghoshal',
     songUrl: 'music/Neelo Valapu.mp3',
     imageUrl: 'Images/robo.webp'
   },
   {
-    id: 25,
+    id: 19,
     title: 'Yemaindhi Ee Vela',
     artist: 'Udit Narayan, Chorus',
     songUrl: 'music/evegreen/01 - Yemaindhi Ee Vela - SenSongsMp3.co.mp3',
     imageUrl: 'Images/aduvaru.jpeg'
   },
   {
-    id: 26,
+    id: 20,
     title: 'O Baby',
     artist: 'Hari Charan, Jenny, Mathangi, Bhargavi',
     songUrl: 'music/evegreen/03 - O Baby - SenSongsMp3.co.mp3',
     imageUrl: 'Images/aduvaru.jpeg'
   },
   {
-    id: 27,
+    id: 21,
     title: 'Allantha Doorala',
     artist: 'S.P. Balu',
     songUrl: 'music/evegreen/05 - Allantha Doorala  - SenSongsMp3.co.mp3',
     imageUrl: 'Images/aduvaru.jpeg'
   },
   {
-    id:28,
+    id:22,
     title: 'Vibe Undi',
     artist: 'Gowrahari, Krishna Kanth',
     songUrl: 'music/Vibe-Undi-Krishna-Kanth-NaaSongs.mp3',
     imageUrl: 'Images/vibeundhi.jpeg',
   },
   {
-    id:29,
+    id:23,
     title: 'Preminche Premavaa',
     artist: 'Shreya Ghoshal, Naresh Iyer',
     songUrl: 'music/evegreen/02 - Preminche Premavaa  - SenSongsMp3.co.mp3',
     imageUrl: 'Images/Nuvvu-Nenu-Prema-2006jpeg.jpg'
   },
   {
-    id:30,
+    id:24,
     title: 'Newyork Nagaram',
     artist: 'A.R.Rahman',
     songUrl: 'music/evegreen/03 - Newyork Nagaram  - SenSongsMp3.co.mp3',
     imageUrl: 'Images/Nuvvu-Nenu-Prema-2006jpeg.jpg'
+  },
+  {
+    id:25,
+    title:'Gundello Edo Sadi',
+    artist: 'Chakri, Kousalya',
+    songUrl: 'music/Gundello Edo Sadi (PenduJatt.Com.Se).mp3',
+    imageUrl:'Images/golimaar-chakri.webp'
+  },
+  {
+    id:26,
+    title:'Yetta Yetta',
+    artist: 'SS Thaman, Sri Krishna',
+    songUrl: 'music/Yetta Yetta.mp3',
+    imageUrl:'Images/Lenin-Naa-Songs-Download-Akhil-Akkineni-Bagyasree-Borse-Lenin-2026-Telugu-Movie-Songs.jpg'
   }
 
 ];
