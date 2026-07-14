@@ -57,10 +57,14 @@ export const PLAYLISTS = [
     name: '90s Telugu Classics',
     imageUrl: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=500',
     songs: [
-      SONGS[4],
-      SONGS[14],
-      SONGS[15],
-      SONGS[16],
+      SONGS[27],
+      SONGS[28],
+      SONGS[29],
+      SONGS[30],
+      SONGS[31],
+      SONGS[32],
+      SONGS[33],
+      SONGS[34]
     ]
    
   },
@@ -96,15 +100,12 @@ export const PLAYLISTS = [
     
       SONGS[14],
       SONGS[15],
-      SONGS[29],
       SONGS[17],
 
       SONGS[19],
       SONGS[20],
       SONGS[21],
       SONGS[1],
-
-      SONGS[28]
     ]
   },
 ];

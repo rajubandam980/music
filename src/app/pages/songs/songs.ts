@@ -32,10 +32,12 @@ audioPlayer!: ElementRef<HTMLAudioElement>;
 
   constructor(private songService: SongService,public playerService: PlayerService) {}
 
-  ngOnInit(): void {
-    // this.loadSongs();
-    this.filteredSongs = this.songs;
-  }
+ngOnInit(): void {
+
+  this.filteredSongs = this.songs;
+
+
+}
 
   loadSongs(): void {
 
@@ -71,12 +73,12 @@ filterSongs(): void {
 
 
 playSong(song: any): void {
-  // this.selectedSong = song;
-  // this.currentSongIndex = this.songs.indexOf(song);
+
   this.playerService.playSong(
     song,
     this.songs
-  );  
+  );
+
 }
 
 playNext(): void {
@@ -96,7 +98,7 @@ togglePlayPause() {
   const audio = this.audioPlayer.nativeElement;
 
   if (audio.paused) {
-    audio.play();
+    //audio.play();
     this.isPlaying = true;
   } else {
     audio.pause();

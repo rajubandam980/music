@@ -1,0 +1,66 @@
+<div 
+class="mini-player"
+(click)="playerService.openFullPlayer()">
+
+
+  <!-- LEFT: IMAGE + SONG INFO -->
+
+  <div class="song-info">
+
+    <img
+      [src]="
+      playerService.currentSong?.imageUrl ||
+      'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200'
+      "
+      class="cover"
+    >
+
+
+    <div class="details">
+
+      <h4>
+        {{playerService.currentSong?.title || 'No Song'}}
+      </h4>
+
+      <p>
+        {{playerService.currentSong?.artist || ''}}
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- RIGHT CONTROLS -->
+
+  <div class="actions">
+
+
+    <button
+      class="heart"
+      (click)="$event.stopPropagation()">
+
+      ♡
+
+    </button>
+
+
+
+    <button
+      class="play"
+      (click)="
+      playerService.togglePlayPause()
+      ">
+
+
+      {{playerService.isPlaying ? '⏸':'▶'}}
+
+
+    </button>
+
+
+  </div>
+
+
+</div>

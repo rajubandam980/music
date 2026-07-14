@@ -77,25 +77,18 @@
     </div>
 
     <!-- RIGHT -->
-    <button class="play-btn">
+   <button class="play-btn"
+        (click)="playSong(song)">
 
-      <span
-        *ngIf="
-          playerService.currentSong?.id === song.id &&
-          playerService.isPlaying
-        ">
-        ⏸
-      </span>
+  <span *ngIf="playerService.currentSong?.id === song.id && playerService.isPlaying">
+    ⏸
+  </span>
 
-      <span
-        *ngIf="
-          playerService.currentSong?.id !== song.id ||
-          !playerService.isPlaying
-        ">
-        ▶
-      </span>
+  <span *ngIf="playerService.currentSong?.id !== song.id || !playerService.isPlaying">
+    ▶
+  </span>
 
-    </button>
+</button>
 
   </div>
 

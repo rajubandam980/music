@@ -3,7 +3,15 @@
 <div class="main-content"></div>
 
 <router-outlet></router-outlet>
+<app-audio-player></app-audio-player>
 
-<app-global-player></app-global-player>
+<app-mini-player
+*ngIf="playerService.currentSong">
+</app-mini-player>
+<app-full-player
+*ngIf="playerService.isExpanded">
+</app-full-player>
+
+<!-- <app-global-player></app-global-player> -->
 
 <!-- <app-footer></app-footer> -->

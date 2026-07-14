@@ -1,0 +1,250 @@
+.mini-player {
+
+  position: fixed;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+
+  height: 70px;
+
+
+  background:
+  rgba(25,25,25,0.95);
+
+
+  backdrop-filter:
+  blur(20px);
+
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+
+  padding:10px 14px;
+
+
+  color:white;
+
+
+  z-index:1000;
+
+
+  cursor:pointer;
+
+
+  border-top:
+  1px solid rgba(255,255,255,.1);
+
+
+  animation:
+  slideUp .3s ease;
+
+}
+
+
+
+
+
+.song-info{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+overflow:hidden;
+
+}
+
+
+
+
+.cover{
+
+width:50px;
+
+height:50px;
+
+border-radius:6px;
+
+object-fit:cover;
+
+}
+
+
+
+
+.details{
+
+
+overflow:hidden;
+
+
+h4{
+
+margin:0;
+
+font-size:14px;
+
+font-weight:600;
+
+
+white-space:nowrap;
+
+overflow:hidden;
+
+text-overflow:ellipsis;
+
+}
+
+
+
+p{
+
+margin:3px 0 0;
+
+font-size:12px;
+
+color:#b3b3b3;
+
+}
+
+}
+
+
+
+
+
+.actions{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+}
+
+
+
+
+button{
+
+border:none;
+
+background:none;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+
+
+
+.heart{
+
+font-size:26px;
+
+}
+
+
+
+
+.play{
+
+width:42px;
+
+height:42px;
+
+
+background:white;
+
+color:black;
+
+
+border-radius:50%;
+
+
+font-size:18px;
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+
+}
+
+
+
+
+.play:hover{
+
+transform:scale(1.1);
+
+}
+
+
+
+
+@keyframes slideUp{
+
+from{
+
+transform:translateY(100%);
+
+}
+
+
+to{
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+
+
+@media(max-width:500px){
+
+
+.mini-player{
+
+height:65px;
+
+padding:8px 12px;
+
+}
+
+
+.cover{
+
+width:45px;
+
+height:45px;
+
+}
+
+
+
+.details h4{
+
+font-size:13px;
+
+}
+
+
+}

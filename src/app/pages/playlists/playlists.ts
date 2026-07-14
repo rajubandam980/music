@@ -60,8 +60,13 @@ loadPlaylists(): void {}
   openPlaylist(pl: any) {
     this.selectedPlaylist = pl;
   }
- playSong(song: any) {
-  this.playerService.playSong(song, this.selectedPlaylist.songs);
+playSong(song: any): void {
+
+  this.playerService.playSong(
+    song,
+    this.songs
+  );
+
 }
 
 

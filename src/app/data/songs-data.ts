@@ -230,6 +230,62 @@ export const SONGS = [
     artist: 'SS Thaman, Sri Krishna',
     songUrl: 'music/Yetta Yetta.mp3',
     imageUrl:'Images/Lenin-Naa-Songs-Download-Akhil-Akkineni-Bagyasree-Borse-Lenin-2026-Telugu-Movie-Songs.jpg'
+  },
+  {
+    id:27,
+    title: 'Suvvee Suvvee',
+    artist: 'S.P. Balu S. Janaki',
+    songUrl: 'music/evegreen/Suvvee Suvvee - SenSongsMp3.Co.mp3',
+    imageUrl: 'Images/golimaar-chakri.webp'
+  },
+  {
+    id:28,
+    title: 'Aakasamlo',
+    artist: 'Ilaiyaraja S. Janaki',
+    songUrl: 'music/evegreen/06 - Aakasamlo - SenSongsMp3.Co.mp3',
+    imageUrl: 'Images/golimaar-chakri.webp'
+  },
+  {
+    id:29,
+    title: 'Hello_Guru',
+    artist: 'S.P. Balu Ilaiyaraja ',
+    songUrl: 'music/evegreen/01_-_Hello_Guru - SenSongsMp3.co.mp3',
+    imageUrl: 'Images/golimaar-chakri.webp'
+  },
+  {
+    id:30,
+    title: 'Chinna Maata Oka Chinna',
+    artist: 'P.Susheela',
+    songUrl: 'music/evegreen/02 - Chinna Maata Oka Chinna - SenSongsMp3.Co.mp3',
+    imageUrl: 'Images/golimaar-chakri.webp'
+  },
+  {
+    id:31,
+    title: 'Jilibili Palukulu',
+    artist: 'S.P. Balu S. Janaki',
+    songUrl: 'music/evegreen/01 - Jilibili Palukulu - SenSongsMp3.Co.mp3',
+    imageUrl: 'Images/golimaar-chakri.webp'
+  },
+  {
+    id:32,
+    title: 'Ade Neevu',
+    artist: 'S.P. Balu S. Janaki',
+    songUrl: 'music/evegreen/05 - Ade Neevu [www.SenSongsMp3.co].mp3',
+    imageUrl: 'Images/golimaar-chakri.webp'
+  },
+  {
+    id:33,
+    title: 'Materani Chinnadani',
+    artist: 'S.P. Balu Ilaiyaraja',
+    songUrl: 'music/evegreen/matarani.mp3',
+    imageUrl: 'Images/golimaar-chakri.webp'
+  },
+  {
+    id:34,
+    title: 'akasam yenatidho',
+    artist: 'S. Janaki',
+    songUrl: 'music/evegreen/akasam yenatidho.mp3',
+    imageUrl: 'Images/golimaar-chakri.webp'
   }
 
 ];
